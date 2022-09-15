@@ -36,7 +36,7 @@
 			<li class="menu">
 				<a href="">Admin</a>
 				<ul class="secondary">
-					<li><a href="">Reservations</a></li>
+					<li><a href="makebooking.php">Reservations</a></li>
 					<li><a href="listorders.php">Orders</a></li>
 					<li><a href="listitems.php">Products</a></li>
 					<li><a href="">Customers</a></li>

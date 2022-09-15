@@ -3,21 +3,21 @@
 include "header.php";
 include "menu.php";
 
-//this line is for debugging purposes so that we can see the actual POST data
-// echo "<pre>";
-// echo "POST DATA\n";
-// var_dump($_POST);
-// echo "</pre>";
+// this line is for debugging purposes so that we can see the actual POST data
+echo "<pre>";
+echo "POST DATA\n";
+var_dump($_POST);
+echo "</pre>";
 
 include "checksession.php";
 
 loginStatus(); //show the current login status
 
 // Shows session variables
-// echo "<pre>";
-// echo "Session variables\n";
-// var_dump($_SESSION);
-// echo "</pre>";
+echo "<pre>";
+echo "Session variables\n";
+var_dump($_SESSION);
+echo "</pre>";
 
 $username = '';
 $query = "SELECT email,password FROM customer WHERE email = '$username'";
@@ -70,7 +70,8 @@ if (isset($_POST['login']) and !empty($_POST['login']) and ($_POST['login'] == '
 ?>
 
 <!-- ------------------------- HTML starts here ------------------------- -->
-<p>email= Admin@pizza.com, pasword= password</p>
+<p>Admin email= Admin@pizza.com, Password= password</p>
+<p>Customer email= customer@test.com, Password= password</p>
 <div id="body" class="contact">
     <div class="footer">
         <div class="contact">

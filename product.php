@@ -3,7 +3,6 @@ include "header.php";
 include "checksession.php";
 
 include "menu.php";
-checkUser();
 ?>
 <div id="body">
 	<div class="header">
