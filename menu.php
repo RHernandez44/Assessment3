@@ -1,3 +1,6 @@
+<?php
+// include "checksession.php";
+?>
 <!-- menu start -->
 <div id="header">
 	<div>
@@ -20,7 +23,6 @@
 				<ul class="primary">
 					<li><a href="about.php">About Us</a></li>
 					<li><a href="contact.php">Contact Us</a></li>
-					<li><a href="">Terms of Use</a></li>
 					<li><a href="privacy.php">Privacy Policy</a></li>
 				</ul>
 			</li>
@@ -29,7 +31,7 @@
 				<ul class="secondary">
 					<li>
 						<a href="login.php">Sign in to Order</a>
-						<a href="">Register</a>
+						<a href="login.php">Logout</a>
 					</li>
 				</ul>
 			</li>
@@ -40,7 +42,7 @@
 					<li><a href="listbooking.php">Reservations</a></li>
 					<li><a href="listorders.php">Orders</a></li>
 					<li><a href="listitems.php">Products</a></li>
-					<li><a href="">Customers</a></li>
+					<!-- <li><a href="">Customers</a></li> -->
 				</ul>
 			</li>
 		</ul>

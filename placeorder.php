@@ -1,8 +1,10 @@
 <!DOCTYPE HTML>
 <html>
 <?php
+include "checksession.php";
 include "header.php";
 include "menu.php";
+checkUser();
 ?>
 
 <head>

@@ -57,15 +57,14 @@ if (isset($_POST['submit']) and !empty($_POST['submit']) and ($_POST['submit'] =
 //prepare a query and send it to the server
 //NOTE for simplicity purposes ONLY we are not using prepared queries
 //make sure you ALWAYS use prepared queries when creating custom SQL like below
-$query = 'SELECT * FROM orders WHERE orderID=' . $id;
+$query = 'SELECT * FROM booking WHERE bookingID=' . $id;
 $result = mysqli_query($DBC, $query);
 $rowcount = mysqli_num_rows($result);
 ?>
-
 <div id="body">
     <div class="header">
         <div>
-            <h1>Order Details Preview before Deletion</h1>
+            <h1>Booking Details Preview before Deletion</h1>
         </div>
     </div>
 </div>
@@ -76,17 +75,15 @@ $rowcount = mysqli_num_rows($result);
 
 //makes sure we have the food item
 if ($rowcount > 0) {
-    echo "<fieldset><legend>Order details #$id</legend><dl>";
+    echo "<fieldset><legend>Order detail #$id</legend><dl>";
     $row = mysqli_fetch_assoc($result);
-    echo "<dt>Order ID:</dt><dd>" . $row['orderID'] . "</dd>" . PHP_EOL;
-    echo "<dt>OrderLine ID:</dt><dd>" . $row['orderLineID'] . "</dd>" . PHP_EOL;
+    echo "<dt>Booking ID:</dt><dd>" . $row['bookingID'] . "</dd>" . PHP_EOL;
     echo "<dt>Customer ID:</dt><dd>" . $row['customerID'] . "</dd>" . PHP_EOL;
-    echo "<dt>Date required:</dt><dd>" . $row['orderDate'] . "</dd>" . PHP_EOL;
-    echo "<dt>Time Required:</dt><dd>" . $row['orderTime'] . "</dd>" . PHP_EOL;
-    echo "<dt>Extras:</dt><dd>" . $row['extras'] . "</dd>" . PHP_EOL;
-    echo "<dt>Total Cost:</dt><dd>" . $row['totalCost'] . "</dd>" . PHP_EOL;
+    echo "<dt>Telephone:</dt><dd>" . $row['telephone'] . "</dd>" . PHP_EOL;
+    echo "<dt>Date:</dt><dd>" . $row['bookingdate'] . "</dd>" . PHP_EOL;
+    echo "<dt>Time:</dt><dd>" . $row['bookingtime'] . "</dd>" . PHP_EOL;
+    echo "<dt>Number of People:</dt><dd>" . $row['people'] . "</dd>" . PHP_EOL;
     echo '</dl></fieldset>' . PHP_EOL;
-
 ?>
     <form method="POST" action="deleteorder.php">
         <h2>Are you sure you want to delete this Order?</h2>

@@ -32,25 +32,25 @@ CREATE TABLE IF NOT EXISTS orders (
   orderID INT UNSIGNED NOT NULL AUTO_INCREMENT,
   orderLineID INT UNSIGNED NOT NULL,
   customerID INT NOT NULL,
-  date DATE NOT NULL,
-  time TIME NOT NULL,
+  orderDate DATE NOT NULL,
+  orderTime TIME NOT NULL,
   extras TEXT NULL,
   totalCost FLOAT(32) NOT NULL,
   PRIMARY KEY (orderID)
 ) AUTO_INCREMENT=1;
 
-INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `date`, `time`, `extras`, `totalCost`)
+INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `orderDate`, `orderTime`, `extras`, `totalCost`)
 VALUES ("90", "2", "39", "2005-01-27", "13:57:14", "recreational sunrise letting lloyd anchor", "47.04");
-INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `date`, `time`, `extras`, `totalCost`)
+INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `orderDate`, `orderTime`, `extras`, `totalCost`)
 VALUES ("24", "94", "32", "2009-11-03", "07:20:57", "training bacterial listings sick entries", "65.87");
-INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `date`, `time`, `extras`, `totalCost`) VALUES ("63", "21", "23", "1980-04-28", "14:09:06", "reprints spain rom ferrari here", "43.92");
-INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `date`, `time`, `extras`, `totalCost`) VALUES ("53", "85", "66", "1990-04-08", "22:57:47", "crops mice perfume harris graduated", "67.03");
-INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `date`, `time`, `extras`, `totalCost`) VALUES ("8", "17", "29", "2005-08-31", "10:02:12", "done household fascinating watts cordless", "3.86");
-INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `date`, `time`, `extras`, `totalCost`) VALUES ("49", "66", "11", "1984-01-25", "09:05:07", "better dining toyota usps obituaries", "15.16");
-INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `date`, `time`, `extras`, `totalCost`) VALUES ("41", "57", "83", "1991-09-26", "14:59:45", "presenting liverpool transportation manual portion", "20.2");
-INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `date`, `time`, `extras`, `totalCost`) VALUES ("79", "46", "11", "2006-02-22", "09:19:56", "negative boulder adam worcester poems", "76.09");
-INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `date`, `time`, `extras`, `totalCost`) VALUES ("26", "25", "81", "1974-04-29", "16:54:24", "thickness sc villages break westminster", "75.5");
-INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `date`, `time`, `extras`, `totalCost`) VALUES ("3", "59", "53", "2011-06-09", "04:32:41", "newer provinces bradley relay decisions", "56.27");
+INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `orderDate`, `orderTime`, `extras`, `totalCost`) VALUES ("63", "21", "23", "1980-04-28", "14:09:06", "reprints spain rom ferrari here", "43.92");
+INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `orderDate`, `orderTime`, `extras`, `totalCost`) VALUES ("53", "85", "66", "1990-04-08", "22:57:47", "crops mice perfume harris graduated", "67.03");
+INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `orderDate`, `orderTime`, `extras`, `totalCost`) VALUES ("8", "17", "29", "2005-08-31", "10:02:12", "done household fascinating watts cordless", "3.86");
+INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `orderDate`, `orderTime`, `extras`, `totalCost`) VALUES ("49", "66", "11", "1984-01-25", "09:05:07", "better dining toyota usps obituaries", "15.16");
+INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `orderDate`, `orderTime`, `extras`, `totalCost`) VALUES ("41", "57", "83", "1991-09-26", "14:59:45", "presenting liverpool transportation manual portion", "20.2");
+INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `orderDate`, `orderTime`, `extras`, `totalCost`) VALUES ("79", "46", "11", "2006-02-22", "09:19:56", "negative boulder adam worcester poems", "76.09");
+INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `orderDate`, `orderTime`, `extras`, `totalCost`) VALUES ("26", "25", "81", "1974-04-29", "16:54:24", "thickness sc villages break westminster", "75.5");
+INSERT INTO `orders` (`orderID`, `orderLineID`, `customerID`, `orderDate`, `orderTime`, `extras`, `totalCost`) VALUES ("3", "59", "53", "2011-06-09", "04:32:41", "newer provinces bradley relay decisions", "56.27");
 
 -- Student code for `orderLines)` table entered here
 -- Fooditems per order 
@@ -80,23 +80,24 @@ CREATE TABLE IF NOT EXISTS booking (
   bookingID int unsigned NOT NULL auto_increment,
   customerID int unsigned NOT NULL,
   telephone varchar(14) NOT NULL,
-  bookingdate datetime,
+  bookingdate date,
+  bookingtime time,
   people int default 1,
   PRIMARY KEY (bookingID)
 ) AUTO_INCREMENT=1;
 
-insert into booking (bookingID, customerID, telephone, bookingdate, people) values (1, 1, "592-232-0521", "2021-12-18 17:29:36", 2);
-insert into booking (bookingID, customerID, telephone, bookingdate, people) values (2, 8, "775-120-6785", "2021-05-18 06:13:06", 4);
-insert into booking (bookingID, customerID, telephone, bookingdate, people) values (3, 4, "393-916-0672", "2021-02-11 08:39:29", 1);
-insert into booking (bookingID, customerID, telephone, bookingdate, people) values (4, 9, "114-541-0005", "2021-11-28 12:20:58", 1);
-insert into booking (bookingID, customerID, telephone, bookingdate, people) values (5, 2, "561-687-0825", "2021-06-10 03:52:37", 4);
-insert into booking (bookingID, customerID, telephone, bookingdate, people) values (6, 9, "959-512-2639", "2021-03-24 17:06:28", 3);
-insert into booking (bookingID, customerID, telephone, bookingdate, people) values (7, 2, "593-781-9360", "2021-03-01 04:11:27", 4);
-insert into booking (bookingID, customerID, telephone, bookingdate, people) values (8, 7, "473-595-2768", "2021-11-04 08:16:06", 5);
-insert into booking (bookingID, customerID, telephone, bookingdate, people) values (9, 4, "673-132-5499", "2021-01-29 16:57:48", 3);
-insert into booking (bookingID, customerID, telephone, bookingdate, people) values (10, 1, "151-149-9447", "2021-05-20 14:13:23", 2);
-insert into booking (bookingID, customerID, telephone, bookingdate, people) values (11, 4, "382-125-5641", "2021-01-16 17:42:15", 5);
-insert into booking (bookingID, customerID, telephone, bookingdate, people) values (12, 7, "507-644-2363", "2021-03-24 05:13:46", 3);
+insert into booking (bookingID, customerID, telephone, bookingdate, bookingtime, people) values (1, 1, "592-232-0521", "2021-12-18",  "17:29:36", 2);
+insert into booking (bookingID, customerID, telephone, bookingdate, bookingtime, people) values (2, 8, "775-120-6785", "2021-05-18",  "06:13:06", 4);
+insert into booking (bookingID, customerID, telephone, bookingdate, bookingtime, people) values (3, 4, "393-916-0672", "2021-02-11",  "08:39:29", 1);
+insert into booking (bookingID, customerID, telephone, bookingdate, bookingtime, people) values (4, 9, "114-541-0005", "2021-11-28",  "12:20:58", 1);
+insert into booking (bookingID, customerID, telephone, bookingdate, bookingtime, people) values (5, 2, "561-687-0825", "2021-06-10",  "03:52:37", 4);
+insert into booking (bookingID, customerID, telephone, bookingdate, bookingtime, people) values (6, 9, "959-512-2639", "2021-03-24",  "17:06:28", 3);
+insert into booking (bookingID, customerID, telephone, bookingdate, bookingtime, people) values (7, 2, "593-781-9360", "2021-03-01",  "04:11:27", 4);
+insert into booking (bookingID, customerID, telephone, bookingdate, bookingtime, people) values (8, 7, "473-595-2768", "2021-11-04",  "08:16:06", 5);
+insert into booking (bookingID, customerID, telephone, bookingdate, bookingtime, people) values (9, 4, "673-132-5499", "2021-01-29",  "16:57:48", 3);
+insert into booking (bookingID, customerID, telephone, bookingdate, bookingtime, people) values (10, 1, "151-149-9447", "2021-05-20",  "14:13:23", 2);
+insert into booking (bookingID, customerID, telephone, bookingdate, bookingtime, people) values (11, 4, "382-125-5641", "2021-01-16",  "17:42:15", 5);
+insert into booking (bookingID, customerID, telephone, bookingdate, bookingtime, people) values (12, 7, "507-644-2363", "2021-03-24",  "05:13:46", 3);
 
 
 -- Customers
@@ -133,4 +134,5 @@ INSERT INTO customer (customerID,firstname,lastname,email) VALUES
 -- special account for the purposes of this exercise
 -- refer to the checksession.php on how it is used
 INSERT INTO customer (customerID,firstname,lastname,email,password) VALUES 
-(1,"Admin","Admin","admin@pizza.com","password")
+(1,"Admin","Admin","admin@pizza.com","password"),
+(21,"CustomerFirst","CustomerLast","customer@test.com","password");

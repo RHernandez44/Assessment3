@@ -19,8 +19,8 @@ echo "Session variables\n";
 var_dump($_SESSION);
 echo "</pre>";
 
-$username = '';
-$query = "SELECT email,password FROM customer WHERE email = '$username'";
+// $username = '';
+// $query = "SELECT email,password FROM customer WHERE email = '$username'";
 
 //simple logout
 if (isset($_POST['logout'])) logout();
@@ -49,7 +49,7 @@ if (isset($_POST['login']) and !empty($_POST['login']) and ($_POST['login'] == '
     //This should be done with prepared statements!!
 
     if ($error == 0) {
-        $query = "SELECT email,password FROM customer WHERE email = '$username'";
+        $query = "SELECT customerID,email,password FROM customer WHERE email = '$username'";
         $result = mysqli_query($DBC, $query);
         if (mysqli_num_rows($result) == 1) { //found the user
             $row = mysqli_fetch_assoc($result);
@@ -60,7 +60,7 @@ if (isset($_POST['login']) and !empty($_POST['login']) and ($_POST['login'] == '
             //this line would be used if our user password was stored as a hashed password
             //if (password_verify($password, $row['password'])) {           
             if ($password === $row['password']) //using plaintext for demonstration only!            
-                login($row['memberID'], $username, $row['role']);
+                login($row['customerID'], $username, $row['role']);
         }
         echo "<h2>Login fail</h2>" . PHP_EOL;
     } else {
@@ -75,7 +75,7 @@ if (isset($_POST['login']) and !empty($_POST['login']) and ($_POST['login'] == '
 <div id="body" class="contact">
     <div class="footer">
         <div class="contact">
-            <h1>Login</h1>
+            <h1>Please Login to continue</h1>
             <form method="POST" action="login.php">
                 <p>
                     <label for="email">Email: </label>

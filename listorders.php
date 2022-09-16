@@ -3,6 +3,7 @@ include "header.php";
 include "menu.php";
 include "checksession.php";
 checkUser();
+isAdmin();
 
 include "config.php"; //load in any variables
 $DBC = mysqli_connect("127.0.0.1", DBUSER, DBPASSWORD, DBDATABASE);
@@ -28,6 +29,7 @@ $rowcount = mysqli_num_rows($result);
         </div>
     </div>
 </div>
+<br><br>
 
 <table border="1">
     <thead>

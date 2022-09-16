@@ -41,19 +41,19 @@ echo "</pre>";
 		<div>
 			<ul>
 				<li>
-					<a href="product.html" class="product"></a>
+					<a href="product.php" class="product"></a>
 					<h1>Pizzas</h1>
 				</li>
 				<li>
-					<a href="about.html" class="about"></a>
+					<a href="about.php" class="about"></a>
 					<h1>ABOUT US</h1>
 				</li>
 				<li>
-					<a href="product.html" class="flavor"></a>
+					<a href="makebooking.php" class="flavor"></a>
 					<h1>RESERVATIONS</h1>
 				</li>
 				<li>
-					<a href="contact.html" class="contact"></a>
+					<a href="contact.php" class="contact"></a>
 					<h1>CONTACT</h1>
 				</li>
 			</ul>
