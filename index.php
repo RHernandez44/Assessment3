@@ -10,9 +10,6 @@ echo "POST DATA\n";
 var_dump($_POST);
 echo "</pre>";
 
-
-loginStatus(); //show the current login status
-
 // Shows session variables
 echo "<pre>";
 echo "Session variables\n";
