@@ -27,7 +27,13 @@ $query = 'SELECT itemID,pizza,pizzatype FROM fooditems ORDER BY itemID';
 $result = mysqli_query($DBC, $query);
 $rowcount = mysqli_num_rows($result);
 ?>
-<h1>Food item list</h1>
+<div id="body">
+    <div class="header">
+        <div>
+            <h1>Food Items List</h1>
+        </div>
+    </div>
+</div>
 <h2><a href='additem.php'>[Add a food item]</a><a href="index.php">[Return to main page]</a></h2>
 <table border="1">
     <thead>
