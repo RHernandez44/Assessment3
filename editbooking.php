@@ -87,7 +87,7 @@ include "checksession.php";
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
             echo "<h2>Booking details updated.</h2>";
-            //        header('Location: http://localhost/bit608/listitems.php', true, 303);      
+            //        header('Location: http://waiwaipizza.ezyro.com/bit608/listitems.php', true, 303);      
         } else {
             echo "<h2>$msg</h2>" . PHP_EOL;
         }

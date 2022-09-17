@@ -2,7 +2,7 @@
   "id": "f539210e-24ed-42f2-9f84-2eb4288c724d",
   "version": "2.0",
   "name": "WaipukPizza",
-  "url": "http://localhost",
+  "url": "http://waiwaipizza.ezyro.com",
   "tests": [{
     "id": "81b49bf0-1b5e-4cdd-903e-65c9c425a1bd",
     "name": "MakeReservation",
@@ -516,6 +516,6 @@
     "timeout": 300,
     "tests": ["81b49bf0-1b5e-4cdd-903e-65c9c425a1bd"]
   }],
-  "urls": ["http://localhost/"],
+  "urls": ["http://waiwaipizza.ezyro.com/"],
   "plugins": []
 }
