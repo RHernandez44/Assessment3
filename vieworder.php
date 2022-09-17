@@ -4,7 +4,7 @@ include "checksession.php";
 include "menu.php";
 include "config.php"; //load in any variables
 loginStatus(); //show the current login status
-$DBC = mysqli_connect("127.0.0.1", DBUSER, DBPASSWORD, DBDATABASE);
+$DBC = mysqli_connect(DBHOST, DBUSER, DBPASSWORD, DBDATABASE);
 
 //insert DB code from here onwards
 //check if the connection was good

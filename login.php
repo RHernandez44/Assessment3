@@ -28,7 +28,7 @@ if (isset($_POST['logout'])) logout();
 if (isset($_POST['login']) and !empty($_POST['login']) and ($_POST['login'] == 'Login')) {
 
     include "config.php"; //load in any variables
-    $DBC = mysqli_connect("127.0.0.1", DBUSER, DBPASSWORD, DBDATABASE) or die();
+    $DBC = mysqli_connect(DBHOST, DBUSER, DBPASSWORD, DBDATABASE) or die();
     //validate incoming data - only the first field is done for you in this example - rest is up to you to do
     //firstname
     $error = 0; //clear our error flag

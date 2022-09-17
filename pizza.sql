@@ -1,6 +1,6 @@
-DROP DATABASE pizza;
-CREATE DATABASE IF NOT EXISTS pizza;
-USE pizza;
+-- DROP DATABASE pizza;
+-- CREATE DATABASE IF NOT EXISTS pizza;
+-- USE pizza;
 
 -- The items/products for the Pizzeria
 DROP TABLE IF EXISTS fooditems;
