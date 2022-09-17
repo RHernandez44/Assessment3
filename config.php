@@ -1,9 +1,4 @@
 <?php
-//MySQL credentails
-// define("DBUSER", "root");
-// define("DBPASSWORD", "root");
-// define("DBDATABASE", "pizza");
-// define("DBHOST", "127.0.0.1");
 
 define("DBUSER", "ezyro_32596838");
 define("DBPASSWORD", "7xsulxz0e");
