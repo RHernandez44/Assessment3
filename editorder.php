@@ -36,7 +36,7 @@ include "checksession.php";
 
     <?php
     include "config.php"; //load in any variables
-    $DBC = mysqli_connect("127.0.0.1", DBUSER, DBPASSWORD, DBDATABASE);
+    $DBC = mysqli_connect(DBHOST, DBUSER, DBPASSWORD, DBDATABASE);
 
     if (mysqli_connect_errno()) {
         echo "Error: Unable to connect to MySQL. " . mysqli_connect_error();
@@ -87,7 +87,7 @@ include "checksession.php";
             mysqli_stmt_execute($stmt);
             mysqli_stmt_close($stmt);
             echo "<h2>Order details updated.</h2>";
-            //        header('Location: http://localhost/bit608/listitems.php', true, 303);      
+            //        header('Location: http://waiwaipizza.ezyro.com/bit608/listitems.php', true, 303);      
         } else {
             echo "<h2>$msg</h2>" . PHP_EOL;
         }

@@ -20,7 +20,7 @@ function isAdmin()
 // function adminCheck()
 // {
 //     // Sends them back to homepage if !admin
-//     $_SESSION['URI'] =  'http://localhost/web/index.php';
+//     $_SESSION['URI'] =  'http://waiwaipizza.ezyro.com/index.php';
 //     $uri = $_SESSION['URI'];
 //     header('Location: ' . $uri, true, 303);
 // }
@@ -33,8 +33,8 @@ function checkUser()
     if ($_SESSION['loggedin'] == 1)
         return TRUE;
     else {
-        $_SESSION['URI'] = 'http://localhost' . $_SERVER['REQUEST_URI']; //save current url for redirect     
-        header('Location: http://localhost/web/login.php', true, 303);
+        $_SESSION['URI'] = 'http://waiwaipizza.ezyro.com' . $_SERVER['REQUEST_URI']; //save current url for redirect     
+        header('Location: http://waiwaipizza.ezyro.com/login.php', true, 303);
     }
 }
 
@@ -59,7 +59,7 @@ function login($id, $username)
     if ($_SESSION['loggedin'] == 0 and !empty($_SESSION['URI']))
         $uri = $_SESSION['URI'];
     else {
-        $_SESSION['URI'] =  'http://localhost/web/index.php';
+        $_SESSION['URI'] =  'http://waiwaipizza.ezyro.com/index.php';
         $uri = $_SESSION['URI'];
     }
 
@@ -77,5 +77,5 @@ function logout()
     $_SESSION['userid'] = -1;
     $_SESSION['username'] = '';
     $_SESSION['URI'] = '';
-    header('Location: http://localhost/web/login.php', true, 303);
+    header('Location: http://waiwaipizza.ezyro.com/login.php', true, 303);
 }

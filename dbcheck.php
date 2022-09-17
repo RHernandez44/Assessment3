@@ -8,7 +8,7 @@
 <body>
     <?php
     include "config.php"; //load in any variables
-    $DBC = mysqli_connect("127.0.0.1", DBUSER, DBPASSWORD, DBDATABASE);
+    $DBC = mysqli_connect(DBHOST, DBUSER, DBPASSWORD, DBDATABASE);
 
     //check if the connection was good
     if (!$DBC) {
