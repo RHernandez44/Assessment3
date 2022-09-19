@@ -4,18 +4,6 @@ include "checksession.php";
 include "menu.php";
 //----------- page content starts here
 
-// this line is for debugging purposes so that we can see the actual POST data
-echo "<pre>";
-echo "POST DATA\n";
-var_dump($_POST);
-echo "</pre>";
-
-// Shows session variables
-echo "<pre>";
-echo "Session variables\n";
-var_dump($_SESSION);
-echo "</pre>";
-
 ?>
 <div id="body" class="home">
 	<div class="header">

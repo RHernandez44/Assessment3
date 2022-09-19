@@ -16,7 +16,6 @@
         exit; //stop processing the page further
     };
 
-    //insert DB code from here onwards
     // show a quick confirmation that we have a connection
     echo "Connectted via " . mysqli_get_host_info($DBC); //show some info on the connection 
 

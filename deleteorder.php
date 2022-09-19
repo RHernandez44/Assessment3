@@ -41,7 +41,7 @@ if (isset($_POST['submit']) and !empty($_POST['submit']) and ($_POST['submit'] =
         $id = 0;
     }
 
-    //save the food item data if the error flag is still clear and food item id is > 0
+    //save the item data if the error flag is still clear and item id is > 0
     if ($error == 0 and $id > 0) {
         $query = "DELETE FROM orders WHERE orderID=?";
         $stmt = mysqli_prepare($DBC, $query); //prepare the query
@@ -55,8 +55,6 @@ if (isset($_POST['submit']) and !empty($_POST['submit']) and ($_POST['submit'] =
 }
 
 //prepare a query and send it to the server
-//NOTE for simplicity purposes ONLY we are not using prepared queries
-//make sure you ALWAYS use prepared queries when creating custom SQL like below
 $query = 'SELECT * FROM orders WHERE orderID=' . $id;
 $result = mysqli_query($DBC, $query);
 $rowcount = mysqli_num_rows($result);
@@ -74,7 +72,7 @@ $rowcount = mysqli_num_rows($result);
 
 <?php
 
-//makes sure we have the food item
+//makes sure we have the item
 if ($rowcount > 0) {
     echo "<fieldset><legend>Order details #$id</legend><dl>";
     $row = mysqli_fetch_assoc($result);

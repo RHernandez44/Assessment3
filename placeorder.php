@@ -8,7 +8,7 @@ checkUser();
 ?>
 
 <head>
-    <title>Add a New Food Item</title>
+    <title>Add a New item</title>
 </head>
 
 <body>
@@ -33,7 +33,7 @@ checkUser();
         };
 
         //validate incoming data - only the first field is done for you in this example - rest is up to you do
-        //food item name
+        //item name
         $error = 0; //clear our error flag
         $msg = 'Error: ';
         if (isset($_POST['pizza']) and !empty($_POST['pizza']) and is_string($_POST['pizza'])) {
@@ -66,15 +66,6 @@ checkUser();
             $msg .= 'Invalid pizza type  '; //append eror message
             $pizzatype = '';
         }
-        //price    
-        // if (isset($_POST['price']) and !empty($_POST['price']) and is_float($_POST['price'])) { //must have decimal
-        //     $price = cleanInput($_POST['price']);
-        //     if ($price < 5 or $price > 50) $price = 5;
-        // } else {
-        //     $error++; //bump the error flag
-        //     $msg .= 'Invalid pizza price '; //append eror message
-        //     $price = '';
-        // }
 
         //save the item data if the error flag is still clear
         if ($error == 0) {
@@ -119,7 +110,7 @@ checkUser();
         </p>
 
         <input type="submit" name="submit" value="Add">
-        <a href="/As2_5029791/">[Cancel]</a>
+        <a href="/http://waiwaipizza.ezyro.com//">[Cancel]</a>
     </form>
 </body>
 <?php

@@ -43,7 +43,7 @@ $rowcount = mysqli_num_rows($result);
     </thead>
     <?php
 
-    //makes sure we have food items
+    //makes sure we have items
     if ($rowcount > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $id = $row['orderID'];
@@ -56,7 +56,7 @@ $rowcount = mysqli_num_rows($result);
             echo         '<a href="deleteorder.php?id=' . $id . '">[delete]</a></td>';
             echo '</tr>' . PHP_EOL;
         }
-    } else echo "<h2>No food items found!</h2>"; //suitable feedback
+    } else echo "<h2>No items found!</h2>"; //suitable feedback
 
     mysqli_free_result($result); //free any memory used by the query
     mysqli_close($DBC); //close the connection once done

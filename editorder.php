@@ -4,6 +4,7 @@
 include "header.php";
 include "menu.php";
 include "checksession.php";
+include "config.php"; //load in any variables
 ?>
 <div id="body">
     <div class="header">
@@ -13,29 +14,9 @@ include "checksession.php";
     </div>
 </div>
 
-<?php
-// // Shows session variables
-// echo "<pre>";
-// echo "Session variables\n";
-// var_dump($_SESSION);
-// echo "</pre>";
-
-// // this line is for debugging purposes so that we can see the actual POST data
-// echo "<pre>";
-// echo "POST DATA\n";
-// var_dump($_POST);
-// echo "</pre>";
-
-// echo "<pre>";
-// echo "GET DATA\n";
-// var_dump($_GET);
-// echo "</pre>";
-?>
-
 <body>
 
     <?php
-    include "config.php"; //load in any variables
     $DBC = mysqli_connect(DBHOST, DBUSER, DBPASSWORD, DBDATABASE);
 
     if (mysqli_connect_errno()) {
@@ -53,7 +34,7 @@ include "checksession.php";
     if ($_SERVER["REQUEST_METHOD"] == "GET") {
         $orderid = $_GET['id'];
         if (empty($orderid) or !is_numeric($orderid)) {
-            echo "<h2>Invalid food item ID</h2>"; //simple error feedback
+            echo "<h2>Invalid item ID</h2>"; //simple error feedback
             exit;
         }
     }
@@ -69,7 +50,7 @@ include "checksession.php";
             $orderid = cleanInput($_POST['id']);
         } else {
             $error++; //bump the error flag
-            $msg .= 'Invalid food item ID '; //append error message
+            $msg .= 'Invalid item ID '; //append error message
             $orderid = 0;
         }
         //Date
@@ -92,7 +73,7 @@ include "checksession.php";
             echo "<h2>$msg</h2>" . PHP_EOL;
         }
     }
-    //locate the food item to edit by using the itemID
+    //locate the item to edit by using the itemID
     //we also include the item ID in our form for sending it back for saving the data
     $query = 'SELECT customerID,orderDate,orderTime,extras FROM orders WHERE orderID=' . $orderid;
     $result = mysqli_query($DBC, $query);
@@ -123,7 +104,7 @@ include "checksession.php";
         </form>
     <?php
     } else {
-        echo "<h2>Food item not found with that ID</h2>"; //simple error feedback
+        echo "<h2>item not found with that ID</h2>"; //simple error feedback
     }
     mysqli_close($DBC); //close the connection once done
     ?>

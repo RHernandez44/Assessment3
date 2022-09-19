@@ -117,7 +117,7 @@ echo "</pre>";
         </p>
 
         <input type="submit" name="submit" value="Add">
-        <a href="/As2_5029791/">[Cancel]</a>
+        <a href="/http://waiwaipizza.ezyro.com//">[Cancel]</a>
     </form>
 </body>
 <?php

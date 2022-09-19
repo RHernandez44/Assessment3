@@ -1,12 +1,6 @@
 <?php
 session_start();
 
-//overrides for development purposes only - comment this out when testing the login
-// $_SESSION['loggedin'] = 0;     
-// $_SESSION['userid'] = 1; //this is the ID for the admin user  
-// $_SESSION['username'] = 'Test';
-//end of overrides
-
 function isAdmin()
 {
     if (($_SESSION['loggedin'] == 1) and ($_SESSION['userid'] == 1))
@@ -16,14 +10,6 @@ function isAdmin()
         echo "<script language='javascript'> alert('User not authorised, sign in as admin to continue'); window.location.href='index.php'; </script>";
     }
 }
-
-// function adminCheck()
-// {
-//     // Sends them back to homepage if !admin
-//     $_SESSION['URI'] =  'http://waiwaipizza.ezyro.com/index.php';
-//     $uri = $_SESSION['URI'];
-//     header('Location: ' . $uri, true, 303);
-// }
 
 //function to check if the user is logged else send to the login page 
 function checkUser()

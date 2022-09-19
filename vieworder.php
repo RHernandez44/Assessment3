@@ -47,7 +47,7 @@ mysqli_free_result($result); //free any memory used by the query
 mysqli_close($DBC); //close the connection once done
 ?>
 
-<h2><a href='listorders.php'>[Return to the orders listing]</a><a href='/AS2_5029791/'>[Return to the main page]</a></h2>
+<h2><a href='listorders.php'>[Return to the orders listing]</a><a href='/http://waiwaipizza.ezyro.com//'>[Return to the main page]</a></h2>
 
 <?php
 include "footer.php";

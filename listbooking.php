@@ -45,7 +45,7 @@ $rowcount = mysqli_num_rows($result);
 
     <?php
 
-    //makes sure we have food items
+    //makes sure we have items
     if ($rowcount > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             $id = $row['bookingID'];

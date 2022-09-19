@@ -132,7 +132,6 @@ INSERT INTO customer (customerID,firstname,lastname,email) VALUES
 (20,"Barry","Burks","risus@libero.net");
 
 -- special account for the purposes of this exercise
--- refer to the checksession.php on how it is used
 INSERT INTO customer (customerID,firstname,lastname,email,password) VALUES 
 (1,"Admin","Admin","admin@pizza.com","password"),
 (21,"CustomerFirst","CustomerLast","customer@test.com","password");

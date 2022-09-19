@@ -37,7 +37,7 @@ $query = 'SELECT * FROM booking WHERE bookingID =' . $id;
 $result = mysqli_query($DBC, $query);
 $rowcount = mysqli_num_rows($result);
 
-//makes sure we have the Food Item
+//makes sure we have the item
 if ($rowcount > 0) {
     echo "<fieldset><legend>Order detail #$id</legend><dl>";
     $row = mysqli_fetch_assoc($result);

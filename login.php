@@ -2,25 +2,9 @@
 
 include "header.php";
 include "menu.php";
-
-// this line is for debugging purposes so that we can see the actual POST data
-echo "<pre>";
-echo "POST DATA\n";
-var_dump($_POST);
-echo "</pre>";
-
 include "checksession.php";
 
 loginStatus(); //show the current login status
-
-// Shows session variables
-echo "<pre>";
-echo "Session variables\n";
-var_dump($_SESSION);
-echo "</pre>";
-
-// $username = '';
-// $query = "SELECT email,password FROM customer WHERE email = '$username'";
 
 //simple logout
 if (isset($_POST['logout'])) logout();
@@ -55,10 +39,6 @@ if (isset($_POST['login']) and !empty($_POST['login']) and ($_POST['login'] == '
             $row = mysqli_fetch_assoc($result);
             mysqli_free_result($result);
             mysqli_close($DBC); //close the connection once done
-            //this line would be added to the registermember.php to make a password hash before storing it
-            //$hash = password_hash($password); 
-            //this line would be used if our user password was stored as a hashed password
-            //if (password_verify($password, $row['password'])) {           
             if ($password === $row['password']) //using plaintext for demonstration only!            
                 login($row['customerID'], $username, $row['role']);
         }
