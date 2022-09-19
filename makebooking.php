@@ -5,18 +5,6 @@ include "header.php";
 include "menu.php";
 include "checksession.php";
 checkUser();
-
-// this line is for debugging purposes so that we can see the actual POST data
-echo "<pre>";
-echo "POST DATA\n";
-var_dump($_POST);
-echo "</pre>";
-
-// Shows session variables
-echo "<pre>";
-echo "Session variables\n";
-var_dump($_SESSION);
-echo "</pre>";
 ?>
 
 <head>

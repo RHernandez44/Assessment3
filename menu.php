@@ -30,8 +30,7 @@
 				<a href="">Login</a>
 				<ul class="secondary">
 					<li>
-						<a href="login.php">Sign in to Order</a>
-						<a href="login.php">Logout</a>
+						<a href="login.php">Sign in / Logout</a>
 					</li>
 				</ul>
 			</li>

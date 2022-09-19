@@ -93,7 +93,10 @@ if ($rowcount > 0) {
     <br><br>
 
 <?php
-} else echo "<h2>No Order found, possbily deleted!</h2>";
+} else {
+    echo "<h2>No Order found, possbily deleted!</h2>";
+    echo "<h2><a href='listorders.php'>Return to Orders List</a></h2>";
+}
 
 mysqli_free_result($result); //free any memory used by the query
 mysqli_close($DBC); //close the connection once done
